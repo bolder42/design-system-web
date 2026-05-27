@@ -13,11 +13,17 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "test": "jest --watchAll --verbose",
+    "test:ci": "jest --ci --runInBand --passWithNoTests",
+    "validate": "npm run test:ci && npm run build",
+    "prepare": "husky",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "jest": {
-    "testEnvironment": "jsdom"
+    "testEnvironment": "jsdom",
+    "moduleNameMapper": {
+      "^.+\\.css$": "<rootDir>/src/test/styleMock.js"
+    }
   },
   "babel": {
     "sourceType": "unambiguous",
@@ -55,6 +61,7 @@
     "@vitest/browser-playwright": "^4.1.7",
     "@vitest/coverage-v8": "^4.1.7",
     "autoprefixer": "^10.5.0",
+    "husky": "^9.1.7",
     "jest": "^30.4.2",
     "jest-environment-jsdom": "^30.4.1",
     "playwright": "^1.60.0",

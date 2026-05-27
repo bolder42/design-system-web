@@ -1,0 +1,31 @@
+.b42-stat {
+  border: 1px solid var(--b42-border-hairline);
+  border-radius: var(--b42-radius-card);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: #070707;
+}
+
+.b42-stat__value {
+  font-family: var(--b42-font-mono);
+  font-size: 36px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  color: var(--b42-fg-primary);
+}
+
+.b42-stat--accent .b42-stat__value {
+  color: var(--b42-accent-lavender);
+}
+
+.b42-stat__label {
+  font-family: var(--b42-font-mono);
+  font-size: 11px;
+  letter-spacing: var(--b42-tracking-label);
+  color: var(--b42-fg-secondary);
+  text-transform: uppercase;
+}

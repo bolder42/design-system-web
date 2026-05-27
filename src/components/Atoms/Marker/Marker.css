@@ -1,0 +1,15 @@
+.b42-marker {
+  font-family: var(--b42-font-mono);
+  font-size: var(--b42-fs-label);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--b42-tracking-label);
+  color: var(--b42-fg-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5ch;
+}
+.b42-marker::before {
+  content: '//';
+  color: var(--b42-accent-lavender);
+}

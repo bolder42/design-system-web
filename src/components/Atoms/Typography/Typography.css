@@ -1,0 +1,84 @@
+/* Typography variants */
+.b42-typo--hero {
+  font-family: var(--b42-font-mono);
+  font-size: var(--b42-fs-hero);
+  font-weight: 500;
+  line-height: var(--b42-lh-tight);
+  letter-spacing: var(--b42-tracking-caps);
+  text-transform: uppercase;
+  color: var(--b42-fg-primary);
+}
+
+.b42-typo--display {
+  font-family: var(--b42-font-mono);
+  font-size: var(--b42-fs-display);
+  font-weight: 500;
+  line-height: var(--b42-lh-snug);
+  letter-spacing: var(--b42-tracking-caps);
+  text-transform: uppercase;
+  color: var(--b42-fg-primary);
+}
+
+.b42-typo--h1 {
+  font-family: var(--b42-font-mono);
+  font-size: var(--b42-fs-h1);
+  font-weight: 500;
+  line-height: var(--b42-lh-snug);
+  letter-spacing: var(--b42-tracking-caps);
+  text-transform: uppercase;
+  color: var(--b42-fg-primary);
+}
+
+.b42-typo--h2 {
+  font-family: var(--b42-font-mono);
+  font-size: var(--b42-fs-h2);
+  font-weight: 500;
+  letter-spacing: var(--b42-tracking-caps);
+  text-transform: uppercase;
+  color: var(--b42-fg-primary);
+}
+
+.b42-typo--h3 {
+  font-family: var(--b42-font-mono);
+  font-size: var(--b42-fs-h3);
+  font-weight: 500;
+  letter-spacing: var(--b42-tracking-caps);
+  color: var(--b42-fg-primary);
+}
+
+.b42-typo--body {
+  font-family: var(--b42-font-sans);
+  font-size: var(--b42-fs-body);
+  line-height: var(--b42-lh-body);
+  color: var(--b42-fg-primary);
+}
+
+.b42-typo--small {
+  font-family: var(--b42-font-sans);
+  font-size: var(--b42-fs-small);
+  line-height: var(--b42-lh-body);
+  color: var(--b42-fg-secondary);
+}
+
+.b42-typo--caption {
+  font-family: var(--b42-font-mono);
+  font-size: var(--b42-fs-caption);
+  letter-spacing: var(--b42-tracking-label);
+  text-transform: uppercase;
+  color: var(--b42-fg-tertiary);
+}
+
+.b42-typo--num {
+  font-family: var(--b42-font-mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+  color: var(--b42-fg-primary);
+}
+
+/* Gradient text effect */
+.b42-typo--gradient {
+  background: var(--b42-gradient-signature);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

@@ -1,0 +1,114 @@
+/* =========================================================================
+   B42 Design System — Design Tokens
+   Dark-first. Mono-dominant. Terminal/cockpit vibe.
+   ========================================================================= */
+
+/* Webfonts ---------------------------------------------------------------- */
+@font-face {
+  font-family: 'Fira Mono';
+  src: url('./fonts/FiraMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Fira Mono';
+  src: url('./fonts/FiraMono-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Fira Mono';
+  src: url('./fonts/FiraMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* ===== Color — Core ==================================================== */
+  --b42-bg-primary:       #000000;
+  --b42-bg-elevated:      #1C1C1C;
+  --b42-bg-secondary:     #0D0D0D;
+  --b42-fg-primary:       #FFFFFF;
+  --b42-fg-secondary:     rgba(255,255,255,0.64);
+  --b42-fg-tertiary:      rgba(255,255,255,0.42);
+  --b42-fg-muted:         rgba(255,255,255,0.24);
+  --b42-fg-warm:          #FFFFFF;
+  --b42-fg-on-warm:       #0A0A0A;
+
+  /* ===== Color — Brand accents =========================================== */
+  --b42-accent-purple-deep: #3D1D4D;
+  --b42-accent-purple:      #893B96;
+  --b42-accent-lavender:    #C9A5E8;
+  --b42-accent-magenta:     #D54071;
+
+  /* ===== Signature gradient ============================================== */
+  --b42-gradient-signature: linear-gradient(90deg, #E8A583 0%, #A99DBE 50%, #5E7A99 100%);
+
+  /* ===== System neutrals ================================================= */
+  --b42-neutral-900: #212121;
+  --b42-neutral-700: #595959;
+  --b42-neutral-500: #78909C;
+  --b42-neutral-100: #EEEEEE;
+
+  /* Border tokens */
+  --b42-border-hairline: rgba(255,255,255,0.10);
+  --b42-border-strong:   rgba(255,255,255,0.22);
+  --b42-border-solid:    #FFFFFF;
+
+  /* ===== Type ============================================================ */
+  --b42-font-mono: 'Fira Mono', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --b42-font-sans: 'Helvetica Neue', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Sizes */
+  --b42-fs-hero:      clamp(48px, 7vw, 88px);
+  --b42-fs-display:   clamp(36px, 5vw, 56px);
+  --b42-fs-h1:        clamp(28px, 3.2vw, 40px);
+  --b42-fs-h2:        24px;
+  --b42-fs-h3:        18px;
+  --b42-fs-label:     13px;
+  --b42-fs-body:      16px;
+  --b42-fs-small:     14px;
+  --b42-fs-caption:   12px;
+
+  /* Tracking */
+  --b42-tracking-caps: 0.02em;
+  --b42-tracking-label: 0.08em;
+  --b42-tracking-body: 0em;
+
+  /* Line heights */
+  --b42-lh-tight: 1.1;
+  --b42-lh-snug:  1.25;
+  --b42-lh-body:  1.55;
+
+  /* ===== Spacing (4px base) ============================================== */
+  --b42-sp-1: 4px;
+  --b42-sp-2: 8px;
+  --b42-sp-3: 12px;
+  --b42-sp-4: 16px;
+  --b42-sp-5: 24px;
+  --b42-sp-6: 32px;
+  --b42-sp-7: 48px;
+  --b42-sp-8: 64px;
+  --b42-sp-9: 96px;
+  --b42-sp-10: 128px;
+
+  /* ===== Radii =========================================================== */
+  --b42-radius-card:  8px;
+  --b42-radius-input: 8px;
+  --b42-radius-pill:  999px;
+  --b42-radius-tag:   24px;
+
+  /* ===== Shadows / rings ================================================= */
+  --b42-ring-focus:   0 0 0 3px rgba(137, 59, 150, 0.35);
+  --b42-elevation-inset: inset 0 1px 0 rgba(255,255,255,0.05);
+
+  /* ===== Motion ========================================================== */
+  --b42-ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --b42-dur-micro: 150ms;
+  --b42-dur-base:  220ms;
+  --b42-dur-slow:  360ms;
+}

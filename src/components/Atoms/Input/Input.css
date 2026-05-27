@@ -1,0 +1,44 @@
+.b42-input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.b42-input-label {
+  font-family: var(--b42-font-mono);
+  font-size: 11px;
+  letter-spacing: var(--b42-tracking-label);
+  color: var(--b42-fg-secondary);
+  text-transform: uppercase;
+}
+.b42-input-label::before {
+  content: '// ';
+  color: var(--b42-accent-lavender);
+}
+
+.b42-input {
+  width: 100%;
+  background: var(--b42-bg-secondary);
+  border: 1px solid var(--b42-border-hairline);
+  border-radius: var(--b42-radius-input);
+  padding: 12px 14px;
+  color: var(--b42-fg-primary);
+  font-family: var(--b42-font-mono);
+  font-size: var(--b42-fs-small);
+  transition:
+    border-color var(--b42-dur-micro) var(--b42-ease-out),
+    box-shadow var(--b42-dur-micro) var(--b42-ease-out);
+  box-sizing: border-box;
+}
+.b42-input::placeholder {
+  color: var(--b42-fg-tertiary);
+}
+.b42-input:focus {
+  outline: 0;
+  border-color: var(--b42-accent-purple);
+  box-shadow: var(--b42-ring-focus);
+}
+.b42-input:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

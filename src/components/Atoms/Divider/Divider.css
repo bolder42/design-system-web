@@ -1,0 +1,23 @@
+.b42-divider {
+  border: 0;
+  width: 100%;
+  margin: var(--b42-sp-6) 0;
+}
+
+/* Signature gradient — 3px bar */
+.b42-divider--signature {
+  height: 3px;
+  background: var(--b42-gradient-signature);
+}
+
+/* Hairline — 1px @ 10% white */
+.b42-divider--hairline {
+  height: 1px;
+  background: var(--b42-border-hairline);
+}
+
+/* Solid — 1px full white */
+.b42-divider--solid {
+  height: 1px;
+  background: var(--b42-fg-primary);
+}

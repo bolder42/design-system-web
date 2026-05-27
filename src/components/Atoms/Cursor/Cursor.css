@@ -1,0 +1,13 @@
+.b42-cursor {
+  display: inline-block;
+  width: 0.6ch;
+  color: var(--b42-fg-primary);
+  animation: b42-blink 1s steps(2, end) infinite;
+}
+.b42-cursor::after {
+  content: '_';
+}
+
+@keyframes b42-blink {
+  50% { opacity: 0; }
+}

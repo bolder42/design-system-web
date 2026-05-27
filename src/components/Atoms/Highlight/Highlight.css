@@ -1,0 +1,7 @@
+.b42-highlight {
+  background: var(--b42-accent-lavender);
+  color: var(--b42-fg-on-warm);
+  padding: 0.05em 0.35ch;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}

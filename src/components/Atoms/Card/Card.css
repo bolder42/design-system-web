@@ -1,0 +1,31 @@
+.b42-card {
+  background: var(--b42-bg-elevated);
+  border: 1px solid var(--b42-border-hairline);
+  border-radius: var(--b42-radius-card);
+  padding: var(--b42-sp-6);
+  color: var(--b42-fg-primary);
+  transition:
+    background var(--b42-dur-micro) var(--b42-ease-out),
+    border-color var(--b42-dur-micro) var(--b42-ease-out);
+}
+
+.b42-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.b42-card--white {
+  background: var(--b42-fg-warm);
+  color: var(--b42-fg-on-warm);
+  border: 0;
+}
+.b42-card--white:hover {
+  background: var(--b42-neutral-100);
+}
+
+.b42-card--accent {
+  background: var(--b42-accent-purple-deep);
+  border: 0;
+}
+.b42-card--accent:hover {
+  background: #4a2460;
+}

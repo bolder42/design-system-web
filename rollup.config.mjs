@@ -1,6 +1,7 @@
 import resolve from "@rollup/plugin-node-resolve";
 import typescript from "@rollup/plugin-typescript";
 import commonjs from "@rollup/plugin-commonjs";
+import url from "@rollup/plugin-url";
 import dts from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
 
@@ -9,6 +10,7 @@ const external = ["react", "react-dom", "react/jsx-runtime"];
 const sharedPlugins = (outDir) => [
     resolve({ extensions: [".js", ".jsx", ".ts", ".tsx"], skip: ["react", "react-dom"] }),
     commonjs(),
+    url({ include: ["**/*.ttf"], limit: Infinity }),
     typescript({
         tsconfig: "./tsconfig.json",
         exclude: ["**/*.test.tsx", "**/*.test.ts", "**/*.stories.ts", "**/*.stories.tsx"],

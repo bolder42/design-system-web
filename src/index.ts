@@ -1,3 +1,4 @@
+import './styles/fonts';
 import './styles/tokens.css';
 
 export { Button } from './components/Atoms/Button';

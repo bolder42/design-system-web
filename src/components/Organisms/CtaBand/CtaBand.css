@@ -1,0 +1,4 @@
+.b42-ctaband { background: rgba(255,255,255,0.02); padding: 28px 24px; border-top: 3px solid var(--b42-accent-gradient); }
+.b42-ctaband__inner { max-width: 1100px; margin: 0 auto; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.b42-ctaband__kicker { color: var(--b42-accent-lavender); font-family: var(--b42-font-mono); margin-bottom:6px; }
+.b42-ctaband__children { color: rgba(255,255,255,0.85); }

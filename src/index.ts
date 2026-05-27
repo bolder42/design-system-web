@@ -33,3 +33,18 @@ export type { ITagProps, TagVariant } from './components/Atoms/Tag/types';
 
 export { Typography } from './components/Atoms/Typography';
 export type { ITypographyProps, TypographyVariant } from './components/Atoms/Typography/types';
+
+export { Nav } from './components/Organisms/Nav/Nav';
+export type { INavProps } from './components/Organisms/Nav/types';
+
+export { Hero } from './components/Organisms/Hero/Hero';
+export type { IHeroProps } from './components/Organisms/Hero/types';
+
+export { CtaBand } from './components/Organisms/CtaBand/CtaBand';
+export type { ICtaBandProps } from './components/Organisms/CtaBand/types';
+
+export { Pillars } from './components/Organisms/Pillars/Pillars';
+export type { IPillarsProps } from './components/Organisms/Pillars/types';
+
+export { Footer } from './components/Organisms/Footer/Footer';
+export type { IFooterProps } from './components/Organisms/Footer/types';

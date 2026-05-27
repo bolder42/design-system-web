@@ -1,0 +1,12 @@
+.b42-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+}
+.b42-nav__links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.b42-nav__link { text-decoration: none; color: inherit; }

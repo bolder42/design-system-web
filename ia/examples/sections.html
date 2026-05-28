@@ -1,0 +1,128 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>B42 Slides</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;background:#000;color:#fff;}
+  .slide{width:1280px;height:720px;position:relative;overflow:hidden;margin:24px auto;border:1px solid rgba(255,255,255,.1);box-sizing:border-box;}
+  .pad{padding:72px 80px;height:100%;box-sizing:border-box;display:flex;flex-direction:column;}
+  .sig{position:absolute;top:0;left:0;right:0;height:3px;background:var(--gradient-signature);}
+  .sig-b{position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--gradient-signature);}
+  .mk{font-family:var(--font-mono);font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6);}
+  .mk::before{content:'//';color:#C9A5E8;margin-right:.5ch;}
+  .foot{position:absolute;bottom:32px;left:80px;right:80px;display:flex;justify-content:space-between;align-items:center;font-family:var(--font-mono);font-size:12px;color:rgba(255,255,255,.4);letter-spacing:.04em;}
+  .foot .bm{color:#fff;font-size:16px;font-weight:500;}
+  .foot .bm::after{content:'_';color:#C9A5E8;animation:bl 1s steps(2,end) infinite;}
+  @keyframes bl{50%{opacity:0;}}
+  .hl{background:#C9A5E8;color:#0A0A0A;padding:.02em .3ch;}
+
+  /* Title slide */
+  .title h1{font-family:var(--font-mono);font-size:96px;font-weight:500;letter-spacing:.01em;text-transform:uppercase;line-height:.98;margin:0;}
+  .title .sub{font-family:'Helvetica Neue',Inter;font-size:22px;line-height:1.5;color:rgba(255,255,255,.72);margin-top:40px;max-width:800px;}
+
+  /* Section */
+  .sec{background:#3D1D4D;}
+  .sec h1{font-family:var(--font-mono);font-size:120px;font-weight:500;text-transform:uppercase;margin:0;line-height:.95;letter-spacing:.01em;}
+  .sec .n{font-family:var(--font-mono);font-size:20px;color:#C9A5E8;letter-spacing:.08em;}
+
+  /* Stats */
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:auto;}
+  .stat{border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:32px;}
+  .stat .n{font-family:var(--font-mono);font-size:64px;font-weight:500;line-height:1;font-variant-numeric:tabular-nums;}
+  .stat.accent .n{color:#C9A5E8;}
+  .stat .l{font-family:var(--font-mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:16px;}
+
+  /* Three pillars */
+  .pil-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;flex:1;}
+  .pil{border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:36px;display:flex;flex-direction:column;gap:20px;}
+  .pil.cream{background:#FFFFFF;color:#0A0A0A;border:0;}
+  .pil .big{font-family:var(--font-mono);font-size:88px;line-height:1;font-weight:500;opacity:.85;}
+  .pil .t{font-family:var(--font-mono);font-size:22px;font-weight:500;text-transform:uppercase;letter-spacing:.02em;}
+  .pil .b{font-family:'Helvetica Neue',Inter;font-size:15px;line-height:1.55;opacity:.85;}
+
+  /* Quote */
+  .quote q{font-family:var(--font-mono);font-size:60px;font-weight:500;text-transform:uppercase;letter-spacing:.01em;line-height:1.1;quotes:none;}
+  .quote q::before,.quote q::after{content:'';}
+  .quote .by{font-family:var(--font-mono);font-size:16px;color:rgba(255,255,255,.6);letter-spacing:.06em;margin-top:40px;text-transform:uppercase;}
+
+  /* Closing */
+  .close h1{font-family:var(--font-mono);font-size:140px;font-weight:500;text-transform:uppercase;margin:0;line-height:.95;}
+  .close .cta{margin-top:48px;font-family:var(--font-mono);font-size:20px;color:rgba(255,255,255,.75);}
+</style></head>
+<body>
+
+<!-- SLIDE 1: Title -->
+<section class="slide title" data-screen-label="01 Title">
+  <div class="sig"></div>
+  <div class="pad">
+    <div class="mk" style="margin-bottom:48px;">HUB BOLDER + 42 RIO · 2025</div>
+    <h1>Transformações<br>reais não se<br>contratam &mdash;<br><span class="hl">se constroem</span>.</h1>
+    <div class="sub">Consultoria de estratégia, tecnologia de ponta e formação das próximas lideranças de tech. Viemos do Rio pra trabalhar aqui, agora — sem ruído.</div>
+  </div>
+  <div class="foot"><span>B42 · 2025</span><span class="bm">B</span></div>
+</section>
+
+<!-- SLIDE 2: Section divider -->
+<section class="slide sec" data-screen-label="02 Section — Quem Somos">
+  <div class="sig"></div>
+  <div class="pad" style="justify-content:center;">
+    <div class="n">// SEÇÃO 01</div>
+    <h1 style="margin-top:20px;">Quem<br>somos.</h1>
+  </div>
+  <div class="sig-b"></div>
+</section>
+
+<!-- SLIDE 3: Stats -->
+<section class="slide" data-screen-label="03 Stats">
+  <div class="sig"></div>
+  <div class="pad">
+    <div class="mk" style="margin-bottom:24px;">NÚMEROS</div>
+    <h2 style="font-family:var(--font-mono);font-size:56px;font-weight:500;text-transform:uppercase;letter-spacing:.01em;line-height:1.05;margin:0;max-width:900px;">Acompanhamos o<br>Brasil se transformar<br>por cada onda.</h2>
+    <div class="stats-grid">
+      <div class="stat"><div class="n">R$10M+</div><div class="l">Negócios gerados</div></div>
+      <div class="stat accent"><div class="n">3.000+</div><div class="l">Lideranças</div></div>
+      <div class="stat"><div class="n">50+</div><div class="l">Corporações</div></div>
+      <div class="stat"><div class="n">4.500</div><div class="l">Inscritos/seletiva</div></div>
+    </div>
+  </div>
+  <div class="foot"><span>// NÚMEROS</span><span class="bm">B</span></div>
+</section>
+
+<!-- SLIDE 4: Three pillars -->
+<section class="slide" data-screen-label="04 Three Pillars">
+  <div class="sig"></div>
+  <div class="pad">
+    <div class="mk">NOSSA TESE</div>
+    <h2 style="font-family:var(--font-mono);font-size:52px;font-weight:500;text-transform:uppercase;letter-spacing:.01em;line-height:1.05;margin:16px 0 0;">No hub Bolder + 42 Rio,<br>fazemos <span class="hl">diferente</span>.</h2>
+    <div class="pil-grid">
+      <div class="pil"><div class="big">T</div><div class="t">Técnica</div><div class="b">Tecnologias emergentes de ponta, aplicadas a problemas reais.</div></div>
+      <div class="pil cream"><div class="big" style="color:#893B96;">O</div><div class="t">Organizacional</div><div class="b">O que precisa mudar estruturalmente pra destravar resultado.</div></div>
+      <div class="pil"><div class="big">H</div><div class="t">Humana</div><div class="b">As pessoas que executam, colaboram e lideram — formando futuros líderes de tech.</div></div>
+    </div>
+  </div>
+  <div class="foot"><span>// TRÊS PILARES</span><span class="bm">B</span></div>
+</section>
+
+<!-- SLIDE 5: Big quote -->
+<section class="slide quote" data-screen-label="05 Big Quote">
+  <div class="sig"></div>
+  <div class="pad" style="justify-content:center;">
+    <div class="mk" style="margin-bottom:40px;">TESE</div>
+    <q>O novo jogo da inovação<br>não se ganha só com<br>tecnologia — mas com<br><span class="hl">pessoas</span> que executam<br>rápido.</q>
+    <div class="by">— Manifesto B42</div>
+  </div>
+  <div class="foot"><span>// MANIFESTO</span><span class="bm">B</span></div>
+</section>
+
+<!-- SLIDE 6: Closing CTA -->
+<section class="slide close" data-screen-label="06 Closing">
+  <div class="sig"></div>
+  <div class="pad" style="justify-content:flex-end;">
+    <div class="mk" style="margin-bottom:40px;">PRÓXIMO PASSO</div>
+    <h1>Leva a gente<br>pro seu <span class="hl">time</span>.</h1>
+    <div class="cta">hello@b42.rio &nbsp;·&nbsp; Rio de Janeiro, BR</div>
+  </div>
+  <div class="sig-b"></div>
+  <div class="foot"><span>B42 · 2025</span><span class="bm">B</span></div>
+</section>
+
+</body></html>

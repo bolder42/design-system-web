@@ -15,3 +15,15 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: { links: [{ label: 'Política de privacidade' }, { label: 'Contato' }], brandText: 'B_' },
 };
+
+export const Columns: Story = {
+  args: { links: [], brandText: 'B42' },
+};
+
+export const LinksWithHref: Story = {
+  args: { links: [{ label: 'Home', href: '/' }, { label: 'Blog', href: '/blog' }], brandText: 'B_' },
+};
+
+export const CustomBrand: Story = {
+  args: { brandText: 'MyBrand' },
+};

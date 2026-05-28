@@ -1,0 +1,396 @@
+/* =========================================================================
+   B42 Design System — design tokens + semantic CSS
+   Dark-first. Mono-dominant. Terminal/cockpit vibe.
+   ========================================================================= */
+
+/* Webfonts ---------------------------------------------------------------- */
+/* Fira Mono self-hosted from /fonts. Inter still pulled from Google Fonts
+   as the Helvetica Neue fallback. */
+@font-face {
+  font-family: 'Fira Mono';
+  src: url('fonts/FiraMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Fira Mono';
+  src: url('fonts/FiraMono-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Fira Mono';
+  src: url('fonts/FiraMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* ===== Color — Core ==================================================== */
+  --bg-primary:       #000000;   /* page default, pure black */
+  --bg-elevated:      #1C1C1C;   /* cards, modals, raised surfaces — clearly lifted */
+  --bg-secondary:     #0D0D0D;   /* inputs, nav wells — subtly sunken */
+  --fg-primary:       #FFFFFF;   /* text + structural UI */
+  --fg-secondary:     rgba(255,255,255,0.64);
+  --fg-tertiary:      rgba(255,255,255,0.42);
+  --fg-muted:         rgba(255,255,255,0.24);
+  --fg-warm:          #FFFFFF;   /* white cards and callouts (inverted surface) */
+  --fg-on-warm:       #0A0A0A;
+
+  /* ===== Color — Brand accents =========================================== */
+  --accent-purple-deep: #3D1D4D; /* plum tint, section fills */
+  --accent-purple:      #893B96; /* primary highlight, links, hover */
+  --accent-lavender:    #C9A5E8; /* keyword highlight block bg */
+  --accent-magenta:     #D54071; /* emphasis — USE SPARINGLY */
+
+  /* ===== Signature gradient ============================================== */
+  --gradient-signature: linear-gradient(90deg, #E8A583 0%, #A99DBE 50%, #5E7A99 100%);
+  --gradient-signature-stops: #E8A583, #A99DBE, #5E7A99;
+
+  /* ===== System neutrals ================================================= */
+  --neutral-900: #212121;
+  --neutral-700: #595959;
+  --neutral-500: #78909C;
+  --neutral-100: #EEEEEE;
+
+  /* Border tokens (derived from foreground alpha) */
+  --border-hairline: rgba(255,255,255,0.10);
+  --border-strong:   rgba(255,255,255,0.22);
+  --border-solid:    #FFFFFF;
+
+  /* ===== Type ============================================================ */
+  --font-mono: 'Fira Mono', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-sans: 'Helvetica Neue', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Sizes — fluid-ish but not too cute */
+  --fs-hero:      clamp(48px, 7vw, 88px);
+  --fs-display:   clamp(36px, 5vw, 56px);
+  --fs-h1:        clamp(28px, 3.2vw, 40px);
+  --fs-h2:        24px;
+  --fs-h3:        18px;
+  --fs-label:     13px;   /* for // SECTION markers */
+  --fs-body:      16px;
+  --fs-small:     14px;
+  --fs-caption:   12px;
+
+  /* Tracking */
+  --tracking-caps: 0.02em;   /* +2%  for CAPS titles */
+  --tracking-label: 0.08em;  /* tighter for small labels */
+  --tracking-body: 0em;
+
+  /* Line heights */
+  --lh-tight: 1.1;
+  --lh-snug:  1.25;
+  --lh-body:  1.55;
+
+  /* ===== Spacing (4px base) ============================================== */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --sp-9: 96px;
+  --sp-10: 128px;
+
+  /* ===== Radii =========================================================== */
+  --radius-card:  8px;
+  --radius-input: 8px;
+  --radius-pill:  999px;
+  --radius-tag:   24px;
+
+  /* ===== Shadows / rings ================================================ */
+  --ring-focus:   0 0 0 3px rgba(137, 59, 150, 0.35);
+  --elevation-inset: inset 0 1px 0 rgba(255,255,255,0.05);
+
+  /* ===== Motion ========================================================== */
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-micro: 150ms;
+  --dur-base:  220ms;
+  --dur-slow:  360ms;
+}
+
+/* =========================================================================
+   Base
+   ========================================================================= */
+html, body {
+  background: var(--bg-primary);
+  color: var(--fg-primary);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* =========================================================================
+   Semantic type classes
+   ========================================================================= */
+.b42-hero, h1.b42-hero {
+  font-family: var(--font-mono);
+  font-size: var(--fs-hero);
+  font-weight: 500;
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--fg-primary);
+}
+
+.b42-display {
+  font-family: var(--font-mono);
+  font-size: var(--fs-display);
+  font-weight: 500;
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+}
+
+.b42-h1, h1 {
+  font-family: var(--font-mono);
+  font-size: var(--fs-h1);
+  font-weight: 500;
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+}
+
+.b42-h2, h2 {
+  font-family: var(--font-mono);
+  font-size: var(--fs-h2);
+  font-weight: 500;
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+}
+
+.b42-h3, h3 {
+  font-family: var(--font-mono);
+  font-size: var(--fs-h3);
+  font-weight: 500;
+  letter-spacing: var(--tracking-caps);
+}
+
+/* // SECTION MARKER — the signature brand motif */
+.b42-marker {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-label);
+  color: var(--fg-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5ch;
+}
+.b42-marker::before { content: '//'; color: var(--accent-lavender); }
+
+.b42-body, p {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--fg-primary);
+}
+
+.b42-small {
+  font-size: var(--fs-small);
+  color: var(--fg-secondary);
+}
+
+.b42-caption {
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--fg-tertiary);
+}
+
+/* Tabular figures — always mono for numbers */
+.b42-num, code, kbd, samp {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+}
+
+/* =========================================================================
+   Signature motifs
+   ========================================================================= */
+
+/* Highlight block — purple marca-texto behind keywords */
+.b42-highlight {
+  background: var(--accent-lavender);
+  color: var(--fg-on-warm);
+  padding: 0.05em 0.35ch;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* Signature gradient divider — 3px bar */
+.b42-divider-signature {
+  height: 3px;
+  width: 100%;
+  background: var(--gradient-signature);
+  border: 0;
+}
+
+/* Hairline divider */
+.b42-divider {
+  height: 1px;
+  background: var(--border-hairline);
+  border: 0;
+  margin: var(--sp-6) 0;
+}
+
+/* Terminal cursor — blinking underscore */
+.b42-cursor {
+  display: inline-block;
+  width: 0.6ch;
+  animation: b42-blink 1s steps(2, end) infinite;
+  color: var(--fg-primary);
+}
+.b42-cursor::after { content: '_'; }
+
+@keyframes b42-blink {
+  50% { opacity: 0; }
+}
+
+/* B_ signature (footer prompt) */
+.b42-signature {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: var(--tracking-caps);
+  color: var(--fg-primary);
+}
+.b42-signature::after {
+  content: '_';
+  color: var(--accent-lavender);
+  animation: b42-blink 1s steps(2, end) infinite;
+  margin-left: 1px;
+}
+
+/* Bracket tag — [ STATUS ] */
+.b42-tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--fg-secondary);
+  padding: 2px 10px;
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-tag);
+}
+.b42-tag::before { content: '['; margin-right: 0.5ch; color: var(--fg-tertiary); }
+.b42-tag::after  { content: ']'; margin-left: 0.5ch; color: var(--fg-tertiary); }
+
+.b42-tag.is-accent  { border-color: var(--accent-purple); color: var(--accent-lavender); }
+.b42-tag.is-magenta { border-color: var(--accent-magenta); color: var(--accent-magenta); }
+
+/* =========================================================================
+   Surfaces
+   ========================================================================= */
+.b42-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-card);
+  padding: var(--sp-6);
+}
+
+.b42-card--white {
+  background: var(--fg-warm);
+  color: var(--fg-on-warm);
+  border: 0;
+}
+.b42-card--white .b42-marker { color: rgba(0,0,0,0.55); }
+.b42-card--white .b42-marker::before { color: var(--accent-purple); }
+
+.b42-card--accent {
+  background: var(--accent-purple-deep);
+  border: 0;
+}
+
+/* =========================================================================
+   Buttons
+   ========================================================================= */
+.b42-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  padding: 12px 20px;
+  border-radius: var(--radius-input);
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--fg-primary);
+  cursor: pointer;
+  transition: background var(--dur-micro) var(--ease-out),
+              border-color var(--dur-micro) var(--ease-out),
+              transform var(--dur-micro) var(--ease-out),
+              opacity var(--dur-micro) var(--ease-out);
+}
+.b42-btn:hover  { background: rgba(255,255,255,0.06); }
+.b42-btn:active { transform: scale(0.98); opacity: 0.9; }
+.b42-btn:focus-visible { outline: 0; box-shadow: var(--ring-focus); }
+
+.b42-btn--primary  { background: var(--fg-primary); color: var(--bg-primary); }
+.b42-btn--primary:hover { background: var(--fg-warm); }
+
+.b42-btn--accent   { background: var(--accent-purple); color: var(--fg-primary); }
+.b42-btn--accent:hover { background: #9C45AB; }
+
+.b42-btn--ghost    { border-color: var(--border-strong); }
+.b42-btn--ghost:hover { border-color: var(--fg-primary); background: transparent; }
+
+/* =========================================================================
+   Inputs
+   ========================================================================= */
+.b42-input {
+  width: 100%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-input);
+  padding: 12px 14px;
+  color: var(--fg-primary);
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  transition: border-color var(--dur-micro) var(--ease-out),
+              box-shadow var(--dur-micro) var(--ease-out);
+}
+.b42-input::placeholder { color: var(--fg-tertiary); }
+.b42-input:focus { outline: 0; border-color: var(--accent-purple); box-shadow: var(--ring-focus); }
+
+/* =========================================================================
+   Utility
+   ========================================================================= */
+.b42-gradient-text {
+  background: var(--gradient-signature);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.b42-gradient-border {
+  position: relative;
+  border-radius: var(--radius-card);
+}
+.b42-gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: var(--gradient-signature);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}

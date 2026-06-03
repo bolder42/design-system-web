@@ -6,8 +6,11 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
-  package:
+  release:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,8 +32,11 @@ jobs:
       - name: Pack package
         run: npm pack
 
-      - name: Upload package artifact
-        uses: actions/upload-artifact@v4
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
         with:
-          name: package
-          path: bolder-design-system-*.tgz
+          tag_name: v${{ github.run_number }}
+          name: Release v${{ github.run_number }}
+          body: Automated release for commit ${{ github.sha }}
+          files: bolder-design-system-*.tgz
+          generate_release_notes: true

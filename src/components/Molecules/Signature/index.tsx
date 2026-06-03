@@ -1,5 +1,6 @@
 import React from 'react';
 import type { ISignatureProps } from './types';
+import { Cursor } from '../../Atoms/Cursor';
 import './Signature.css';
 
 const Signature: React.FC<ISignatureProps> = ({
@@ -13,6 +14,7 @@ const Signature: React.FC<ISignatureProps> = ({
       {...rest}
     >
       {text}
+      <Cursor tone="lavender" />
     </span>
   );
 };

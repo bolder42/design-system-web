@@ -1,13 +1,13 @@
 import React from 'react';
-import type { IInputProps } from './types';
-import './Input.css';
+import type { IInputFieldProps } from './types';
+import './InputField.css';
 
-const Input: React.FC<IInputProps> = ({
+const InputField: React.FC<IInputFieldProps> = ({
   label,
   className = '',
   id,
   ...rest
-}: IInputProps) => {
+}: IInputFieldProps) => {
   const inputId = id || (label ? `input-${label.toLowerCase().replace(/\s+/g, '-')}` : undefined);
 
   return (
@@ -26,4 +26,4 @@ const Input: React.FC<IInputProps> = ({
   );
 };
 
-export { Input };
+export { InputField };

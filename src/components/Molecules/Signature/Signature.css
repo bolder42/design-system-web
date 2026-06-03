@@ -1,0 +1,12 @@
+.b42-signature {
+  font-family: var(--b42-font-mono);
+  font-weight: 500;
+  letter-spacing: var(--b42-tracking-caps);
+  color: var(--b42-fg-primary);
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.b42-signature > .b42-cursor {
+  margin-left: 1px;
+}

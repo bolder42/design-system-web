@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Signature } from './index';
 
 const meta = {
-  title: 'Atoms/Signature',
+  title: 'Molecules/Signature',
   component: Signature,
   parameters: {
     layout: 'centered',

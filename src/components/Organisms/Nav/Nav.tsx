@@ -1,7 +1,7 @@
 import React from 'react';
 import type { INavProps } from './types';
-import { Signature } from '../../Atoms/Signature';
-import { Tag } from '../../Atoms/Tag';
+import { Signature } from '../../Molecules/Signature';
+import { Tag } from '../../Molecules/Tag';
 import './Nav.css';
 
 const Nav: React.FC<INavProps> = ({ sections = ['// SECTION'], brandText = 'B_' }) => {

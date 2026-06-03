@@ -12,7 +12,7 @@ This repository is a React component library published from `src/index.ts` and b
 
 ## Project conventions
 
-- Components are grouped by `Atoms` and `Organisms` under `src/components/`.
+- Components are grouped by `Atoms`, `Molecules`, and `Organisms` under `src/components/`. Atoms are pure primitives; Molecules are compositions of 2+ atoms; Organisms are distinct UI sections that compose molecules (and, when necessary, atoms directly).
 - Public exports are centralized in `src/index.ts`.
 - Shared styling lives in `src/styles/` and is imported from the package entrypoint.
 - Tests use Jest with `jsdom` and need CSS imports mapped to `src/test/styleMock.js`.

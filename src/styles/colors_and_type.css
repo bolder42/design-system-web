@@ -6,6 +6,8 @@
 /* Webfonts ---------------------------------------------------------------- */
 /* Fira Mono self-hosted from /fonts. Inter still pulled from Google Fonts
    as the Helvetica Neue fallback. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @font-face {
   font-family: 'Fira Mono';
   src: url('fonts/FiraMono-Regular.ttf') format('truetype');
@@ -27,7 +29,6 @@
   font-style: normal;
   font-display: swap;
 }
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
   /* ===== Color — Core ==================================================== */

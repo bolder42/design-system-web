@@ -78,5 +78,8 @@
   },
   "peerDependencies": {
     "react": ">=16"
+  },
+  "dependencies": {
+    "@storybook/addon-themes": "^10.4.2"
   }
 }

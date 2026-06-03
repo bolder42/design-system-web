@@ -1,6 +1,6 @@
 import React from 'react';
 import type { IFooterProps } from './types';
-import { Signature } from '../../Atoms/Signature';
+import { Signature } from '../../Molecules/Signature';
 import './Footer.css';
 
 const Footer: React.FC<IFooterProps> = ({ links = [], brandText = 'B42' }) => {

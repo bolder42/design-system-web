@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Tag } from './index';
 
 const meta = {
-  title: 'Atoms/Tag',
+  title: 'Molecules/Tag',
   component: Tag,
   parameters: {
     layout: 'centered',

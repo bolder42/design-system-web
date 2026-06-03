@@ -26,6 +26,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Get package version
+        id: version
+        run: echo "version=v$(node -p 'require("./package.json").version')" >> $GITHUB_OUTPUT
+
       - name: Build project
         run: npm run build
 
@@ -35,8 +39,8 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v${{ github.run_number }}
-          name: Release v${{ github.run_number }}
+          tag_name: ${{ steps.version.outputs.version }}
+          name: Release ${{ steps.version.outputs.version }}
           body: Automated release for commit ${{ github.sha }}
           files: bolder-design-system-*.tgz
           generate_release_notes: true
